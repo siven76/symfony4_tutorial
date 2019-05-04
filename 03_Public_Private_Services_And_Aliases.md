@@ -15,4 +15,4 @@ app.greeting:
 
 Notes:
 - above configuration makes the Greeting service a public service
-- gives a alias `app.greeting` for the service class `App\Service\Greeting`
+- gives an id `app.greeting` for the service alias `App\Service\Greeting`
