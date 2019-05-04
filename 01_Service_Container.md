@@ -106,7 +106,7 @@ class BlogController extends AbstractController
 
 The message variable is then used in the template file:
 
-```html
+```twig
 <!DOCTYPE html>
 <html>
     <head>
