@@ -1,6 +1,7 @@
 # Service Tags
 - a way to tell Symfony or other third-party bundles that a service should be registered in some special way
 
+## Register a service with service tags
 **Example: registering a Twig extension**
 ```yaml
 # config/services.yaml
@@ -18,7 +19,7 @@ services:
 - when auto-configure option is set to true in `services.yaml`
 	- service tags are automatically added for the command
 
-Experiment 3: auto-configure the service tags for a new console command
+### Experiment 3: auto-configure the service tags for a new console command
 
 - Create a new console command class
 
