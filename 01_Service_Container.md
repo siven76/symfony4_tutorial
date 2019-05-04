@@ -122,3 +122,52 @@ The message variable is then used in the template file:
     </body>
 </html>
 ```
+
+In the above example, the Service Container injected the LoggerInterface into the constructor of the Greeting service.
+
+To know which service is being used by the LoggerInterface:
+
+```bash
+php bin/console debug:autowiring LoggerInterface
+```
+
+Output:
+```
+Autowirable Types
+=================
+
+ The following classes & interfaces can be used as type-hints when autowiring:
+ (only showing classes/interfaces matching LoggerInterface)
+
+ Describes a logger instance.
+ Psr\Log\LoggerInterface (monolog.logger)
+```
+
+To see the definition of the monolog.logger service:
+
+```bash
+php bin/console debug:container monolog.logger
+```
+
+Output:
+```
+Information for Service "monolog.logger"
+========================================
+
+ ---------------- -------------------------------------------------------------------
+  Option           Value
+ ---------------- -------------------------------------------------------------------
+  Service ID       monolog.logger
+  Class            Symfony\Bridge\Monolog\Logger
+  Tags             -
+  Calls            pushProcessor, useMicrosecondTimestamps, pushHandler, pushHandler
+  Public           no
+  Synthetic        no
+  Lazy             no
+  Shared           yes
+  Abstract         no
+  Autowired        no
+  Autoconfigured   no
+ ---------------- -------------------------------------------------------------------
+
+```
