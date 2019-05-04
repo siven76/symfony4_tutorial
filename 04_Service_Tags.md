@@ -1,4 +1,20 @@
 # Service Tags
+- a way to tell Symfony or other third-party bundles that a service should be registered in some special way
+
+**Example: registering a Twig extension**
+```yaml
+# config/services.yaml
+services:
+    App\Twig\AppExtension:
+        public: false
+        tags: ['twig.extension']
+
+```
+- services tagged with `twig.extension` tag are collected during initialization of TwigBundle
+- those services are then added to Twig as extensions
+- list of [built-in Symfony service tags](https://symfony.com/doc/current/reference/dic_tags.html)
+- each tag has a different effect on the service
+- many tags require additional arguments
 - when auto-configure option is set to true in `services.yaml`
 	- service tags are automatically added for the command
 
