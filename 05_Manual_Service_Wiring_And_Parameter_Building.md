@@ -125,7 +125,8 @@ parameters:
     locale: 'en'
     hello_message: 'Hello from service'
 ```
-	- Change the service definition to use the defined parameter
+- Change the service definition to use the defined parameter
+
 ```yaml
 App\Service\Greeting:
     arguments:
