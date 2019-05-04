@@ -62,7 +62,7 @@ App\Service\Greeting: ['@monolog.logger']
 - automatically registers your services as commands, event subscribers, etc
 - useful when creating classes that implement certain Symfony core features
 
-## Experiment 2: auto-configure
+### Experiment 2: auto-configure
 
 - Create a new security voter class
 ```php
