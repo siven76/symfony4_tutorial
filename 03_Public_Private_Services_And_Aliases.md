@@ -9,8 +9,8 @@
 - In `services.yaml`, under `services` add the following
 ```yaml
 app.greeting:
-	public: true
-	alias: App\Service\Greeting
+    public: true
+    alias: App\Service\Greeting
 ```
 
 Notes:
